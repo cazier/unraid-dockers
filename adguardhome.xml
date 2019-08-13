@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>adguardhome</Name>
+  <Repository>adguard/adguardhome</Repository>
+  <Registry>https://hub.docker.com/r/adguard/adguardhome/</Registry>
+  <Network>br0</Network>
+  <MyIP>192.168.1.254</MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/adguard/adguardhome/</Support>
+  <Project/>
+  <Overview>Network-wide ads &amp;amp; trackers blocking DNS server</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:80]</WebUI>
+  <TemplateURL/>
+  <Icon>https://avatars3.githubusercontent.com/u/8361145?s=200&amp;amp;v=4</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1565739147</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Network-wide ads &amp;amp; trackers blocking DNS server</Description>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>53</HostPort>
+        <ContainerPort>53</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>67</HostPort>
+        <ContainerPort>67</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>68</HostPort>
+        <ContainerPort>68</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>68</HostPort>
+        <ContainerPort>68</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>853</HostPort>
+        <ContainerPort>853</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/adguardhome/work</HostDir>
+      <ContainerDir>/opt/adguardhome/work</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/adguardhome/conf</HostDir>
+      <ContainerDir>/opt/adguardhome/conf</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Data Directory" Target="/opt/adguardhome/work" Default="" Mode="rw" Description="Container Path: /opt/adguardhome/work" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/adguardhome/work</Config>
+  <Config Name="Configuration Directory" Target="/opt/adguardhome/conf" Default="" Mode="rw" Description="Container Path: /opt/adguardhome/conf" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/adguardhome/conf</Config>
+  <Config Name="DNS Port (TCP)" Target="53" Default="" Mode="tcp" Description="Container Port: 53" Type="Port" Display="always" Required="false" Mask="false">53</Config>
+  <Config Name="DNS Port (UDP)" Target="53" Default="" Mode="udp" Description="Container Port: 53" Type="Port" Display="always" Required="false" Mask="false">53</Config>
+  <Config Name="BOOTP Server/DHCP" Target="67" Default="" Mode="udp" Description="Container Port: 67" Type="Port" Display="always" Required="false" Mask="false">67</Config>
+  <Config Name="BOOTP Client/DHCP (TCP)" Target="68" Default="" Mode="udp" Description="Container Port: 68" Type="Port" Display="always" Required="false" Mask="false">68</Config>
+  <Config Name="BOOTP Client/DHCP (UDP)" Target="68" Default="" Mode="tcp" Description="Container Port: 68" Type="Port" Display="always" Required="false" Mask="false">68</Config>
+  <Config Name="HTTP" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">80</Config>
+  <Config Name="HTTPS" Target="443" Default="" Mode="tcp" Description="Container Port: 443" Type="Port" Display="always" Required="false" Mask="false">443</Config>
+  <Config Name="DNS over TLS" Target="853" Default="" Mode="tcp" Description="Container Port: 853" Type="Port" Display="always" Required="false" Mask="false">853</Config>
+  <Config Name="WebUI" Target="3000" Default="" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+</Container>
